@@ -1,0 +1,15 @@
+{
+    "name": "Nurse",
+    "description": "Nurse from Lego.",
+    "image": "https://ipfs.io/ipfs/QmWrCKqRZkbo87xqNhMoN6V5mW2RTTiw8g31TFCsuwebaH/3.png",
+    "attributes": [
+        {
+            "trait_type": "Color",
+            "value": "White"
+        },
+        {
+            "trait_type": "Gender",
+            "value": "Female"
+        }
+    ]
+}

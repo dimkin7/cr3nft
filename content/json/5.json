@@ -1,0 +1,15 @@
+{
+    "name": "Fireman",
+    "description": "Fireman from Lego.",
+    "image": "https://ipfs.io/ipfs/QmWrCKqRZkbo87xqNhMoN6V5mW2RTTiw8g31TFCsuwebaH/5.png",
+    "attributes": [
+        {
+            "trait_type": "Color",
+            "value": "Black"
+        },
+        {
+            "trait_type": "Gender",
+            "value": "Male"
+        }
+    ]
+}

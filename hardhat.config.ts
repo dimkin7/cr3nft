@@ -3,7 +3,8 @@ import * as dotenv from "dotenv";
 import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-etherscan";
 
-import "@nomiclabs/hardhat-ethers";  //this can be changed:  import "@nomiclabs/hardhat-waffle";
+import "@nomiclabs/hardhat-ethers";  //this can be changed:  
+import "@nomiclabs/hardhat-waffle";
 
 
 import "@typechain/hardhat";

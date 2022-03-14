@@ -8,10 +8,11 @@ async function main() {
   console.log("Account balance:", ethers.utils.formatEther(balance));
 
 
-  const factory = await ethers.getContractFactory("DimaNFT");
+  //const factory = await ethers.getContractFactory("DimaNFT");
+  const factory = await ethers.getContractFactory("Dima1155");
   const contract = await factory.deploy();
   await contract.deployed();
-  console.log("Contract deployed to:", contract.address);
+  console.log("Contract Dima1155 deployed to:", contract.address);
 }
 
 // run

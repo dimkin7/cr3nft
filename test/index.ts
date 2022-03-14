@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { Contract } from "ethers";
-import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-with-address";
+import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 
 describe("NFT", function () {
 
@@ -22,11 +22,13 @@ describe("NFT", function () {
   });
 
   it("Mint 1", async function () {
-    await nft.mint(addr1.address); 
+    await expect(nft.mint(addr1.address))
+      .to.emit(nft, "Mint")
+      .withArgs(addr1.address, 1);
   });
 
   it("Mint 2", async function () {
-    await nft.mint(addr2.address); 
+    await nft.mint(addr2.address);
   });
 
   it("Token URI 1", async function () {
@@ -37,7 +39,7 @@ describe("NFT", function () {
   });
 
   it("Burn 2", async function () {
-    await nft.burn(2); 
+    await nft.burn(2);
   });
 
   it("Token URI non existent", async function () {
@@ -45,6 +47,6 @@ describe("NFT", function () {
   });
 
   it("Supports interface", async function () {
-    expect( await nft.supportsInterface(0x01ffc9a7)).to.equal(true);
+    expect(await nft.supportsInterface(0x01ffc9a7)).to.equal(true);
   });
 });

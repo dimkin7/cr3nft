@@ -36,6 +36,10 @@ contract DimaNFT is ERC721, AccessControl {
         return string(abi.encodePacked("https://ipfs.io/ipfs/QmP2aNgzCpt5Rz8zTifc7X2BB2E39ZTTzo3HwbghaxiWbK/", tokenId.toString(), ".json"));
     }
 
+
+    //event for Mint
+    event Mint(address indexed _to, uint _tokenId);
+
     //Mint new token
     function mint(address to)
         public
@@ -47,7 +51,8 @@ contract DimaNFT is ERC721, AccessControl {
         uint256 newItemId = nftCounter.current();
         _safeMint(to, newItemId);
 
-        //TODO emit event
+        //event
+        emit Mint(to, newItemId);
         return newItemId;
     }
 
